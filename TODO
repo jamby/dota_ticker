@@ -1,0 +1,63 @@
+Dota Ticker
+---------------
+Tournament
+  has_many matches
+
+  Data
+    - name
+    - api id
+    - url
+
+Match
+  belongs_to tournament
+  has_many games
+
+  Data
+    - Start time (date time)
+    - workflow state
+  
+  Workflow states
+    - new
+    - in progress
+    - finished
+    - cancelled
+
+Game
+  belongs_to match
+  has_and_belongs_to_many teams (2 max per game)
+
+  Data
+    - match id
+
+Games Team (HABTM Relationship Table)
+  belongs_to game
+  belongs_to home_team, through team
+  belongs_to away_team, through team
+
+  Data
+    - game id
+    - home team id
+    - away team id
+    - winner (stores the winning team id but NOT through a relationship)
+    - loser (stores the losing team id but NOT through a relationship)
+    
+Team
+  has_and_belongs_to_many games
+  has_many players
+
+  Data
+    - game id
+    - logo
+    - name
+    - country
+
+Player
+  belongs_to team
+  
+  Data
+    - team id
+    - First name
+    - Last name
+    - handle (maybe)
+    - account id
+
