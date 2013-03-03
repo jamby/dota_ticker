@@ -14,6 +14,13 @@ Match
 
   Data
     - Start time (date time)
+    - workflow state
+  
+  Workflow states
+    - new
+    - in progress
+    - finished
+    - cancelled
 
 Game
   belongs_to match
