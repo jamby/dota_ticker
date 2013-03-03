@@ -1,13 +1,67 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
+@charset "utf-8";
+
+body {
+	background-color: #272727;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: Verdana;
+	-webkit-text-size-adjust: none;
+	font-size: 12px;
+}
+
+/* Login top bar */
+
+.loginbar {
+	font-size: 9px;
+	height: 11px;
+	color: #ffffff;
+	margin: 0 auto;
+	display: block;
+	width: 740px;
+}
+
+.logintimeinfo {
+	width: 370px;
+	text-align: left;
+	float: left;
+}
+
+.logininfo {
+	width: 370px;
+	text-align: right;
+	float: right;
+}
+
+.timeloginbar {
+	
+}
+
+/* main area */
+
+.maincontainer {
+	width: 660px;
+	margin: 0 auto;
+	min-height: 500px;
+	color: #ffffff;
+}
+
+.headerlogo {
+	width: 650px;
+	height: 200px;
+}
+
+.linkbar {
+	width: 660px;
+	height: 75px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.content {
+	width: 640px;
+	min-height: 500px;
+	display: block;
+	text-align: center;
+}
