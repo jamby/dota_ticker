@@ -1,4 +1,4 @@
 .content
-  %p
-    This is a paragraph.
-    Here's some words.
+  - @matches.each do |match|
+    %p
+      = match.team1.team_name + " vs " + match.team2.team_name + "\t" + match.start_time.strftime("%-m/%-d/%Y %I:%M %Z")

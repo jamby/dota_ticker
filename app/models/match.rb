@@ -21,4 +21,8 @@ class Match < ActiveRecord::Base
     end
     state :match_finished
   end
+  
+  def self.upcoming
+    Match.where(workflow_state: :match_unplayed)
+  end
 end
