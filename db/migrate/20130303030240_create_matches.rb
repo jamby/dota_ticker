@@ -5,6 +5,7 @@ class CreateMatches < ActiveRecord::Migration
       t.string :workflow_state
       t.integer :team1_id
       t.integer :team2_id
+      t.integer :tournament_id
 
       t.timestamps
     end

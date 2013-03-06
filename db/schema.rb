@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20130303031916) do
     t.string   "workflow_state"
     t.integer  "team1_id"
     t.integer  "team2_id"
+    t.integer  "tournament_id"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end
