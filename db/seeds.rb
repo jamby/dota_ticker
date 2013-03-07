@@ -8,14 +8,14 @@
 tournament1 = Tournament.create(name: "The Defense 3")
 tournament2 = Tournament.create(name: "Starseries V")
 
-team1 = Team.create(team_name: "Team Liquid", country: "USA")
-team2 = Team.create(team_name: "Evil Geniuses", country: "USA")
-team3 = Team.create(team_name: "Natus Vincere", country: "Ukraine")
-team4 = Team.create(team_name: "Team Empire", country: "Russia")
-team5 = Team.create(team_name: "No Tidehunter", country: "Sweden")
-team6 = Team.create(team_name: "Mousesports", country: "Germany")
-team7 = Team.create(team_name: "Fnatic.eu", country: "Europe")
-team8 = Team.create(team_name: "Virtus Pro", country: "Russia")
+team1 = Team.create(team_name: "Team Liquid", country: "USA", team_tag: "Liquid")
+team2 = Team.create(team_name: "Evil Geniuses", country: "USA", team_tag: "EG")
+team3 = Team.create(team_name: "Natus Vincere", country: "Ukraine", team_tag: "Na`Vi")
+team4 = Team.create(team_name: "Team Empire", country: "Russia", team_tag: "Empire")
+team5 = Team.create(team_name: "No Tidehunter", country: "Sweden", team_tag: "nth")
+team6 = Team.create(team_name: "Mousesports", country: "Germany", team_tag: "mouz")
+team7 = Team.create(team_name: "Fnatic.eu", country: "Europe", team_tag: "Fnatic")
+team8 = Team.create(team_name: "Virtus Pro", country: "Russia", team_tag: "VP")
 
 time = Time.now
 time = time.change(day: time.day + 1, hour: 12)

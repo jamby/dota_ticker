@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20130303031916) do
     t.string   "team_name"
     t.string   "logo"
     t.string   "country"
+    t.string   "team_tag"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

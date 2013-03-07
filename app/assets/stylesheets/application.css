@@ -65,3 +65,67 @@ body {
 	display: block;
 	text-align: center;
 }
+
+/* upcoming */
+table, td {
+	border-collapse: collapse;
+	margin: 0px;
+	padding: 0px;
+}
+
+.upcoming {
+	float: left;
+	width: 520px;
+	height: 100px;
+	text-align: left;
+	line-height: 100px;
+}
+
+.upcomingteamleft {
+	width: 250px;
+	height: 100px;
+	font-size: 16px;
+	font: bold;
+	float: left;
+	text-align: center;
+}
+
+.upcomingvs {
+	width: 20px;
+	height: 100px;
+	font-size: 10px;
+	text-align: center;
+	float: left;
+}
+
+.upcomingteamright {
+	width: 250px;
+	height: 100px;
+	font-size: 16px;
+	font: bold;
+	float: right;
+	text-align: center;
+}
+
+.upcomingtime {
+	float: right;
+	width: 110px;
+	height: 50px;
+	text-align: center;
+	display: inline-block;
+}
+
+.upcomingtimeuntil {
+	font-size: 14px;
+	width: 110px;
+	height: 50px;
+	font: bold;
+	vertical-align: bottom;
+}
+
+.upcomingactualtime {
+	height: 50px;
+	width: 110px;
+	font-size: 9px;
+	vertical-align: top;
+}

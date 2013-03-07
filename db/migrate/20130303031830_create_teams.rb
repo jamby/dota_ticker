@@ -5,6 +5,7 @@ class CreateTeams < ActiveRecord::Migration
       t.string :team_name
       t.string :logo
       t.string :country
+      t.string :team_tag
 
       t.timestamps
     end

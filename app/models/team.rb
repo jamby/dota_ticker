@@ -1,5 +1,5 @@
 class Team < ActiveRecord::Base
-  attr_accessible :api_teamid, :country, :logo, :team_name
+  attr_accessible :api_teamid, :country, :logo, :team_name, :team_tag
   
   has_many :players
   
