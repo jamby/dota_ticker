@@ -1,0 +1,14 @@
+%table
+  %tr.upcoming
+    %td.upcomingteamleft
+      = match.team1.team_tag
+    %td.upcomingvs
+      vs.
+    %td.upcomingteamright
+      = match.team2.team_tag
+  %tr.upcomingtime
+    %td.upcomingtimeuntil{:rowspan => "2"}
+      12:00:00
+  %tr.upcomingtime
+    %td.upcomingactualtime
+      = match.start_time.strftime("%-m/%-d/%Y %I:%M")
