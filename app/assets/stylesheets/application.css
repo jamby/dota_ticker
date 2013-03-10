@@ -71,9 +71,12 @@ body {
 
 /* upcoming */
 table, td {
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
 	border-collapse: collapse;
 	margin: 0px;
-	margin-bottom: 2px;
+	margin-bottom: 3px;
 	padding: 0px;
 }
 
