@@ -2,7 +2,7 @@ DotaTicker::Application.routes.draw do
   
   root to: 'home#index'
   
-  route '/upcoming' to 'home#index'
+  match '/upcoming', to: 'home#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
