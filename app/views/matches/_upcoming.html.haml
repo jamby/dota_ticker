@@ -1,5 +1,5 @@
-%table
-  %tr.upcoming
+%table.upcoming{:onclick => "window.location='www.dota2.com'"}
+  %tr.upcominginfo
     %td.upcomingteamleft
       = match.team1.team_tag
     %td.upcomingvs
@@ -11,4 +11,4 @@
       12:00:00
   %tr.upcomingtime
     %td.upcomingactualtime
-      = match.start_time.strftime("%-m/%-d/%Y %I:%M")
+      = match.start_time.localtime.strftime("%-m/%-d/%Y %I:%M")

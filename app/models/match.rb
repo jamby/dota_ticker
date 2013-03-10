@@ -22,7 +22,11 @@ class Match < ActiveRecord::Base
     state :match_finished
   end
   
-  def self.upcoming
-    Match.where(workflow_state: :match_unplayed)
+  def self.is_upcoming_or_live
+    Match.where(workflow_state: [:match_unplayed, :match_playing])
+  end
+  
+  def self.finished
+    Match.where(workflow_state: :match_finished)
   end
 end

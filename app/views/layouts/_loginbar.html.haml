@@ -1,4 +1,4 @@
 .loginbar
   .logintimeinfo
-    = Time.now.strftime("%-m/%-d/%Y %I:%M %Z")
+    = Time.now.localtime.strftime("%-m/%-d/%Y %I:%M %Z")
   .logininfo THIS IS WHERE THE LOGIN INFORMATION GOES! + TIME!

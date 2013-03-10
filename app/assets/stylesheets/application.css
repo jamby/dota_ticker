@@ -70,10 +70,16 @@ body {
 table, td {
 	border-collapse: collapse;
 	margin: 0px;
+	margin-bottom: 2px;
 	padding: 0px;
 }
 
-.upcoming {
+table.upcoming {
+	cursor: pointer;
+	background-color: #6d6d6d;
+}
+
+.upcominginfo {
 	float: left;
 	width: 520px;
 	height: 100px;
