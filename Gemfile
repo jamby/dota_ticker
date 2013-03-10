@@ -7,6 +7,7 @@ gem 'rails', '3.2.11'
 
 gem 'workflow'
 gem 'haml'
+gem 'time_diff'
 
 group :development, :test do
   gem 'sqlite3'

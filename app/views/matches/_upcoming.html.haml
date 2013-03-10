@@ -8,7 +8,7 @@
       = match.team2.team_tag
   %tr.upcomingtime
     %td.upcomingtimeuntil{:rowspan => "2"}
-      12:00:00
+      = time_until_match(match)
   %tr.upcomingtime
     %td.upcomingactualtime
-      = match.start_time.localtime.strftime("%-m/%-d/%Y %I:%M")
+      = match.start_time.localtime.strftime("%-m/%-d/%Y %I:%M %p")
