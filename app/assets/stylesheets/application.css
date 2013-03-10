@@ -12,6 +12,9 @@ body {
 }
 
 /* Login top bar */
+.topbar {
+	height: 11px;
+}
 
 .loginbar {
 	font-size: 9px;
