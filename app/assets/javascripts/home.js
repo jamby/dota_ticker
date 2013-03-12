@@ -1,16 +1,15 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
-<script type="text/javascript">
 function GetCount(ddate,iid){
-	//newDate = new Date(Number(ddate) * 1000);
+	newDate = new Date(Number(ddate) * 1000);
 	dateNow = new Date();    //grab current date
-	amount = ddate.getTime() - dateNow.getTime();    //calc milliseconds between dates
+	amount = newDate.getTime() - dateNow.getTime();    //calc milliseconds between dates
 	delete dateNow;
 
 	// if time is already past
 	if(amount < 0){
-		document.getElementById(iid).innerHTML="Now!";
+		$(iid).html("Now!")
 	}
 	// else date is still good
 	else{
@@ -34,14 +33,15 @@ function GetCount(ddate,iid){
 		out += (mins<=9?'0':'')+mins+((mins==1)?":":":");
 		out += (secs<=9?'0':'')+secs+((secs==1)?"":"");
 		out = out.substr(0,out.length);
-		document.getElementById(iid).innerHTML=out;
+		$(iid).html(out);
 
 		setTimeout(function(){GetCount(ddate,iid)}, 1000);
 	}
 }
-</script>
 
-// Calling your get timer functionality
-$.each($('td.countdown_timer'), function(index, value){
-  GetCount(value.getAttr('countdown_time'), value)
+$(document).ready( function() {
+	// Calling your get timer functionality
+	$.each($('td.countdown_timer'), function(index, value){
+	  GetCount($(value).attr('countdown_time'), value)
+	})
 })
