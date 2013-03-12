@@ -1,4 +1,4 @@
-%table.upcoming{:onclick => "window.location='www.dota2.com'"}
+%table.upcoming{:onclick => "window.location='#'"}
   %tr.upcominginfo
     %td.upcomingteamleft
       = match.team1.team_tag
@@ -7,8 +7,7 @@
     %td.upcomingteamright
       = match.team2.team_tag
   %tr.upcomingtime
-    %td.upcomingtimeuntil{:rowspan => "2"}
-      = time_until_match(match)
+    %td.upcomingtimeuntil.countdown_timer{:rowspan => "2", :countdown_time => "#{match.start_time.localtime.strftime("%a %d %b %Y %H:%M:%S GMT%z (%Z)")}"}
   %tr.upcomingtime
     %td.upcomingactualtime
       = match.start_time.localtime.strftime("%-m/%-d/%Y %I:%M %p")
