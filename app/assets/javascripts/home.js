@@ -28,10 +28,15 @@ function GetCount(ddate,iid){
 
 		secs=Math.floor(amount);//seconds
 
-		if(days != 0){out += (days<=9?'0':'')+days+((days==1)?":":":");}
-		out += (hours<=9?'0':'')+hours+((hours==1)?":":":");
-		out += (mins<=9?'0':'')+mins+((mins==1)?":":":");
-		out += (secs<=9?'0':'')+secs+((secs==1)?"":"");
+		if(days != 0){
+			if(days > 1){out += days + " ";}
+			out += ((days==1)?"Tomorrow":"more days");
+		}
+		else{
+			out += (hours<=9?'0':'')+hours+((hours==1)?":":":");
+			out += (mins<=9?'0':'')+mins+((mins==1)?":":":");
+			out += (secs<=9?'0':'')+secs+((secs==1)?"":"");
+		}
 		out = out.substr(0,out.length);
 		$(iid).html(out);
 

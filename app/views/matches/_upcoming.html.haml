@@ -1,4 +1,6 @@
 %table.upcoming{:onclick => "window.location='#'"}
+  %th.tournamentname
+    = Tournament.find(match.tournament_id).name
   %tr.upcominginfo
     %td.upcomingteamleft
       = match.team1.team_tag
@@ -6,8 +8,13 @@
       vs.
     %td.upcomingteamright
       = match.team2.team_tag
-  %tr.upcomingtime
-    %td.upcomingtimeuntil.countdown_timer{:rowspan => "2", :countdown_time => "#{match.start_time.localtime.to_i}"}
-  %tr.upcomingtime
-    %td.upcomingactualtime
-      = match.start_time.localtime.strftime("%-m/%-d/%Y %I:%M %p")
+  - if match.start_time.localtime - Time.now < 0
+    %tr.upcomingtimelive
+      %td.upcomingnowlive
+        LIVE!
+  - else
+    %tr.upcomingtime
+      %td.upcomingtimeuntil.countdown_timer{:rowspan => "2", :countdown_time => "#{match.start_time.localtime.to_i}"}
+    %tr.upcomingtime
+      %td.upcomingactualtime
+        = match.start_time.localtime.strftime("%-m/%-d/%Y %I:%M %p")
