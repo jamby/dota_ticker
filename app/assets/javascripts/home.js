@@ -49,4 +49,10 @@ $(document).ready( function() {
 	$.each($('td.countdown_timer'), function(index, value){
 	  GetCount($(value).attr('countdown_time'), value)
 	})
+	
+	$(function() {
+	    $("table.match").click(function(event) {
+	        $(this).find(".hidden").slideToggle();
+	    });
+	});
 })

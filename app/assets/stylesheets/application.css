@@ -92,7 +92,7 @@ th {
 	font-style: none;
 }
 
-table.upcoming {
+table.match {
 	cursor: pointer;
 	background-color: #6d6d6d;
 }
@@ -107,7 +107,7 @@ th.tournamentname {
 	text-align: left;
 }
 
-.upcominginfo {
+.matchinfo {
 	float: left;
 	width: 520px;
 	height: 100px;
@@ -177,4 +177,9 @@ th.tournamentname {
 	height: 50px;
 	font-size: 9px;
 	vertical-align: top;
+}
+
+.hidden {
+    display: none;
+    text-indent: 1em;
 }

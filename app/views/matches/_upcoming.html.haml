@@ -1,7 +1,7 @@
-%table.upcoming{:onclick => "window.location='#'"}
+%table.match
   %th.tournamentname
     = Tournament.find(match.tournament_id).name
-  %tr.upcominginfo
+  %tr.matchinfo
     %td.upcomingteamleft
       = match.team1.team_tag
     %td.upcomingvs
@@ -18,3 +18,7 @@
     %tr.upcomingtime
       %td.upcomingactualtime
         = match.start_time.localtime.strftime("%-m/%-d/%Y %I:%M %p")
+  %tr
+    %td
+      .hidden
+        This should be hidden.
