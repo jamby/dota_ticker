@@ -1,2 +1,8 @@
-.headerlogo
-.navbar
+.header
+  = image_tag("headerlogo.png", alt: "Dota Ticker", class: 'centered')
+  %nav
+    %ul
+      %li= link_to "Upcoming", upcoming_path
+      %li= link_to "Recent", matches_path
+      %li= link_to "Tournaments", '#'
+      %li= link_to "Teams", '#'

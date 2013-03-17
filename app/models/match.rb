@@ -8,7 +8,7 @@ class Match < ActiveRecord::Base
   belongs_to :team1, class_name: "Team", foreign_key: "team1_id"
   belongs_to :team2, class_name: "Team", foreign_key: "team2_id"
   
-  default_scope order: 'start_time ASC'
+  #default_scope order: 'start_time ASC'
   
   #############################################################################
   ############################# WORKFLOW STATES ###############################
@@ -25,7 +25,7 @@ class Match < ActiveRecord::Base
   end
   
   def self.is_upcoming_or_live
-    Match.where(workflow_state: [:match_unplayed, :match_playing])
+    Match.where(workflow_state: [:match_unplayed, :match_playing]).order('start_time ASC')
   end
   
   def self.finished
